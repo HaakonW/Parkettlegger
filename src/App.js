@@ -4,8 +4,8 @@ import NonValidPlankControl from "./NonValidPlankControl";
 import "./styles.css";
 
 export default function App() {
-  const [width, setWidth] = useState(1761);
-  const [plankWidth, setPlankWidth] = useState(223);
+  const [width, setWidth] = useState(1000);
+  const [plankWidth, setPlankWidth] = useState(283);
   const [minWidth, setminWidth] = useState(100);
 
   const wholePlanks = Math.floor(width / plankWidth);
