@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ReactGA from 'react-ga';
 import { InputField } from './Fields';
 import LayOutFloor from './LayOutFloor';
 import NonValidPlankControl from './NonValidPlankControl';
@@ -9,6 +10,7 @@ export default function App() {
   const [fullWidthFloor, setFullWidth] = useState(1000);
   const [plankWidth, setPlankWidth] = useState(283);
   const [minWidth, setminWidth] = useState(100);
+  ReactGA.initialize('G-JL0TL2MJE7');
 
   const {
     wholePlanks,
