@@ -1,27 +1,20 @@
 import React from "react";
+import { WALL_SPACE } from "./utils";
 
 type Props = {
-  floorData: {
-    wholePlanks: number;
-    validPlank: boolean;
-    leftoverPlank: number;
-    plankWidth: number;
-    minWidth: number;
-    slicedRow: number;
-    choppedPlanks: number;
-  };
+  wholePlanks: number;
+  validPlank: boolean;
+  leftOverPlank: number;
+  plankWidth: number;
+  slicedRow: number;
 };
-const NonValidPlankControl = ({ floorData }: Props) => {
-  const {
-    wholePlanks,
-    plankWidth,
-    leftoverPlank,
-    validPlank,
-    minWidth,
-    slicedRow,
-    choppedPlanks
-  } = floorData;
-
+const NonValidPlankControl = ({
+  wholePlanks,
+  plankWidth,
+  leftOverPlank,
+  validPlank,
+  slicedRow
+}: Props) => {
   return (
     <div>
       <h2>Slik legger du gulvet:</h2>
@@ -30,10 +23,16 @@ const NonValidPlankControl = ({ floorData }: Props) => {
           <p>
             <b>{wholePlanks} hele bord</b> av {wholePlanks * plankWidth}mm{" "}
             <br />
-            <b>1 kappet bord</b> av {(leftoverPlank * plankWidth).toFixed(1)}mm
+            <b>1 kappet bord</b> av {(leftOverPlank * plankWidth).toFixed(1)}mm
+            <br />
+            <b>Avstand til veggen på hver side: </b> {WALL_SPACE}mm
             <br />
             <b>Kontroll:</b>{" "}
-            {(wholePlanks * plankWidth + leftoverPlank * plankWidth).toFixed(1)}
+            {(
+              wholePlanks * plankWidth +
+              leftOverPlank * plankWidth +
+              WALL_SPACE
+            ).toFixed(1)}
           </p>
         </div>
       ) : (
@@ -49,7 +48,7 @@ const NonValidPlankControl = ({ floorData }: Props) => {
             <br />
             <br />
             Kapp den første og siste raden til samme bredde: <br />
-            {leftoverPlank + 1}*{plankWidth}/2 = {slicedRow}mm <br />
+            {leftOverPlank + 1}*{plankWidth}/2 = {slicedRow}mm <br />
             {wholePlanks - 1} bord + 2 kappede bord: <br />
             {wholePlanks - 1}*{plankWidth}
             mm + 2*{slicedRow} ={" "}
