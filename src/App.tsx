@@ -24,7 +24,7 @@ export default function App() {
   });
   return (
     <div className="App">
-      <h1>Hvordan legger parkettgulv?</h1>
+      <h1>Hvordan legge parkettgulv?</h1>
       <p>
         Her er en kalkulator som regner ut hvordan du skal legge parkettgulv.
         Den følger en oppskrift gitt av{' '}

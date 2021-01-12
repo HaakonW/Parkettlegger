@@ -1,6 +1,6 @@
 body {
-  background: #fff;
-  color: #222831;
+  background: #425c5a;
+  color: #a2bfbd;
 }
 
 @media only screen and (min-width: 600px) {
@@ -23,6 +23,18 @@ label {
   flex-direction: column;
   align-items: flex;
   margin: 0.5em 0em;
+  text-transform: uppercase;
+}
+
+a {
+  color: #ffcea2;
+}
+
+h1,
+h2,
+h3 {
+  color: #ffcea2;
+  font-weight: initial;
 }
 
 input {

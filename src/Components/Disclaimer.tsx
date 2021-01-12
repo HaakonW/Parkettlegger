@@ -5,8 +5,8 @@ export const Disclaimer = () => (
     <h3>Disclaimer</h3>
     <p>
       Jeg tar INGEN ansvar for om dette ikke fungerer. Jeg er <b>ikke</b> en
-      snekker. Jeg har kun prøvd å lage en løsning for å legge mitt eget gulv
-      litt mer effektivt. Jeg har fulgt{' '}
+      håndtverker. Jeg har kun prøvd å lage en løsning for å legge mitt eget
+      gulv litt mer effektivt. Jeg har fulgt{' '}
       <a
         target="_blank"
         rel="noopener"

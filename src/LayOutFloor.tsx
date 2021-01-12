@@ -1,5 +1,5 @@
-import React from "react";
-import { WALL_SPACE } from "./utils";
+import React from 'react';
+import { WALL_SPACE } from './utils';
 
 type Props = {
   wholePlanks: number;
@@ -14,7 +14,7 @@ const LayOutFloor = ({
   plankWidth,
   leftOverPlank,
   validPlank,
-  slicedRow
+  slicedRow,
 }: Props) => {
   const floor = [];
   let i = 0;
@@ -35,28 +35,30 @@ const LayOutFloor = ({
   return (
     <div
       style={{
-        border: "solid black 1px",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        padding: "0px",
-        margin: "0"
+        border: 'solid black 1px',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        padding: '0px',
+        margin: '0',
+        backgroundColor: '#fff',
+        color: '#000',
       }}
     >
-      <span style={{ textAlign: "center", padding: "2px" }}>
+      <span style={{ textAlign: 'center', padding: '2px' }}>
         {WALL_SPACE / 2} mm
       </span>
       {floor.map((item, i) => (
         <p
           key={i}
           style={{
-            borderTop: "solid black 1px",
-            textAlign: "center",
-            padding: "4px",
-            backgroundColor: "#e8e8e8",
+            borderTop: 'solid black 1px',
+            textAlign: 'center',
+            padding: '4px',
+            backgroundColor: '#e8e8e8',
             margin: 0,
             height:
-              item === plankWidth ? "100%" : `${(item / plankWidth) * 100}%`
+              item === plankWidth ? '100%' : `${(item / plankWidth) * 100}%`,
           }}
         >
           {item.toFixed(0)} mm
@@ -64,9 +66,9 @@ const LayOutFloor = ({
       ))}
       <span
         style={{
-          padding: "2px",
-          textAlign: "center",
-          borderTop: "solid 1px black"
+          padding: '2px',
+          textAlign: 'center',
+          borderTop: 'solid 1px black',
         }}
       >
         {WALL_SPACE / 2} mm
