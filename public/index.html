@@ -7,6 +7,14 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <meta name="theme-color" content="#000000" />
+
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="description" content="Parkettlegger" />
+      <meta name="keywords" content="parkett, gulv, håndtverker, snekker" />
+      <meta name="author" content="Haakon Winther" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
     <!--
       manifest.json provides metadata used when your web app is added to the
       homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
@@ -27,6 +35,19 @@
 
   <body>
     <noscript> You need to enable JavaScript to run this app. </noscript>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-SEETHG7MC3"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-SEETHG7MC3');
+    </script>
     <div id="root"></div>
     <!--
       This HTML file is a template.
