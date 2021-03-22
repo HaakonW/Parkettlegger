@@ -55,7 +55,7 @@ const LayOutFloor = ({
             borderTop: 'solid black 1px',
             textAlign: 'center',
             padding: '4px',
-            backgroundColor: '#e8e8e8',
+            backgroundColor: '#dcb63c',
             margin: 0,
             height:
               item === plankWidth ? '100%' : `${(item / plankWidth) * 100}%`,

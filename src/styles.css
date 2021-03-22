@@ -1,6 +1,12 @@
+html {
+  height: 100%;
+}
 body {
-  background: #425c5a;
-  color: #a2bfbd;
+  background-image: url('./bg2.jpg');
+  background-repeat: repeat-y;
+  background-size: 100% 100%;
+  color: white;
+  /* background: linear-gradient(0deg, #00000088 30%, #ffffff44 100%); */
 }
 
 @media only screen and (min-width: 600px) {
@@ -24,6 +30,7 @@ label {
   align-items: flex;
   margin: 0.5em 0em;
   text-transform: uppercase;
+  color: #fff;
 }
 
 a {
@@ -33,19 +40,29 @@ a {
 h1,
 h2,
 h3 {
-  color: #ffcea2;
-  font-weight: initial;
+  color: #fff;
+}
+h1 {
+  text-align: center;
+}
+
+article {
+  color: white;
+  text-transform: uppercase;
 }
 
 input {
-  font-size: 22px;
+  font-size: 18px;
   margin-top: 2px;
   display: block;
   text-align: left;
   padding: 10px;
-  background: #e8e8e8;
+  background: #000;
   border: none;
   border-bottom: solid 2px #222831;
+  opacity: 0.6;
+  border-radius: 7px;
+  color: #fff;
 }
 
 table {

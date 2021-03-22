@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { Disclaimer } from './Components/Disclaimer';
-import { Feedback } from './Components/Feedback';
 import { InputField } from './Fields';
 import LayOutFloor from './LayOutFloor';
 import NonValidPlankControl from './NonValidPlankControl';
-import './styles.css';
 import { getFloorData, WALL_SPACE } from './utils';
+import './styles.css';
 
 export default function App() {
   const [fullWidthFloor, setFullWidth] = useState(1000);
@@ -23,21 +22,8 @@ export default function App() {
     minWidth,
   });
   return (
-    <div className="App">
-      <h1>Hvordan legge parkettgulv?</h1>
-      <p>
-        Her er en kalkulator som regner ut hvordan du skal legge parkettgulv.
-        Den følger en oppskrift gitt av{' '}
-        <a
-          target="_blank"
-          rel="noopener"
-          href="https://www.bjelin.se/shop/h%C3%A4rdat-tr%C3%A4/27124-h-rdad-ek-bosarp-v2"
-        >
-          Bjelin
-        </a>{' '}
-        og har kun blitt testet til egent bruk.
-      </p>
-      <h2>Kalkulator</h2>
+    <main className="App">
+      <h1>Legge parkettgulv</h1>
       <div className="Inputs">
         <InputField
           label="Gulvbredde"
@@ -45,14 +31,12 @@ export default function App() {
           value={fullWidthFloor}
           handleChange={setFullWidth}
         />
-
         <InputField
           label="Bordbredde (mm)"
           name="plankWidth"
           value={plankWidth}
           handleChange={setPlankWidth}
         />
-
         <InputField
           label="Minste bredde for et kappet bord"
           name="minWidth"
@@ -60,7 +44,6 @@ export default function App() {
           handleChange={setminWidth}
         />
       </div>
-      {/*<Table floorData={floorData} />*/}
       <NonValidPlankControl
         wholePlanks={wholePlanks}
         plankWidth={plankWidth}
@@ -76,7 +59,6 @@ export default function App() {
         slicedRow={slicedRow}
       />
       <Disclaimer />
-      <Feedback />
-    </div>
+    </main>
   );
 }

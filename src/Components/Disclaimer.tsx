@@ -1,20 +1,22 @@
 import React from 'react';
 
 export const Disclaimer = () => (
-  <div>
+  <footer>
     <h3>Disclaimer</h3>
     <p>
-      Jeg tar INGEN ansvar for om dette ikke fungerer. Jeg er <b>ikke</b> en
-      håndtverker. Jeg har kun prøvd å lage en løsning for å legge mitt eget
-      gulv litt mer effektivt. Jeg har fulgt{' '}
+      Gjør dette på eget ansvar og følg bruksanvisningen som følger med ditt
+      gulv.
+    </p>
+    <p>
+      Hvis du har tilbakemeldinger eller ønsker om mer funksjonallitet, kan du
+      sende meg en{' '}
       <a
-        target="_blank"
         rel="noopener"
-        href="https://www.bjelin.se/shop/h%C3%A4rdat-tr%C3%A4/27124-h-rdad-ek-bosarp-v2"
+        href="mailto:haakonwinther@gmail.com?subject=Parkettlegger.no"
       >
-        malen til Bjelin
+        epost
       </a>
       .
     </p>
-  </div>
+  </footer>
 );
