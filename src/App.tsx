@@ -22,43 +22,48 @@ export default function App() {
     minWidth,
   });
   return (
-    <main className="App">
-      <h1>Legge parkettgulv</h1>
-      <div className="Inputs">
-        <InputField
-          label="Gulvbredde"
-          name="fullWidthFloor"
-          value={fullWidthFloor}
-          handleChange={setFullWidth}
+    <>
+      <header>
+        <h1>Legge parkettgulv</h1>
+        <p>Et verktøy for å regne ut hvordan man kan legge parkettgulv.</p>
+      </header>
+      <main className="App">
+        <div className="Inputs">
+          <InputField
+            label="Bredde på gulvet"
+            name="fullWidthFloor"
+            value={fullWidthFloor}
+            handleChange={setFullWidth}
+          />
+          <InputField
+            label="Bredde på et parkettbor (mm)"
+            name="plankWidth"
+            value={plankWidth}
+            handleChange={setPlankWidth}
+          />
+          <InputField
+            label="Minste bredde for et kappet bord"
+            name="minWidth"
+            value={minWidth}
+            handleChange={setminWidth}
+          />
+        </div>
+        <NonValidPlankControl
+          wholePlanks={wholePlanks}
+          plankWidth={plankWidth}
+          leftOverPlank={leftOverPlank}
+          validPlank={lastPlankIsValid}
+          slicedRow={slicedRow}
         />
-        <InputField
-          label="Bordbredde (mm)"
-          name="plankWidth"
-          value={plankWidth}
-          handleChange={setPlankWidth}
+        <LayOutFloor
+          wholePlanks={wholePlanks}
+          plankWidth={plankWidth}
+          leftOverPlank={leftOverPlank}
+          validPlank={lastPlankIsValid}
+          slicedRow={slicedRow}
         />
-        <InputField
-          label="Minste bredde for et kappet bord"
-          name="minWidth"
-          value={minWidth}
-          handleChange={setminWidth}
-        />
-      </div>
-      <NonValidPlankControl
-        wholePlanks={wholePlanks}
-        plankWidth={plankWidth}
-        leftOverPlank={leftOverPlank}
-        validPlank={lastPlankIsValid}
-        slicedRow={slicedRow}
-      />
-      <LayOutFloor
-        wholePlanks={wholePlanks}
-        plankWidth={plankWidth}
-        leftOverPlank={leftOverPlank}
-        validPlank={lastPlankIsValid}
-        slicedRow={slicedRow}
-      />
-      <Disclaimer />
-    </main>
+        <Disclaimer />
+      </main>
+    </>
   );
 }

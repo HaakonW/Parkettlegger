@@ -25,7 +25,7 @@ const NonValidPlankControl = ({
             <br />
             <b>1 kappet bord</b> av {(leftOverPlank * plankWidth).toFixed(1)}mm
             <br />
-            <b>Avstand til veggen på hver side: </b> {WALL_SPACE}mm
+            <b>Avstand til veggen på hver side: </b> {WALL_SPACE / 2}mm
             <br />
             <b>Kontroll:</b>{' '}
             {(
