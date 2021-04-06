@@ -16,7 +16,7 @@ const NonValidPlankControl = ({
   slicedRow,
 }: Props) => {
   return (
-    <article>
+    <section>
       <h2>Resultat:</h2>
       {validPlank ? (
         <div>
@@ -55,7 +55,7 @@ const NonValidPlankControl = ({
           </p>
         </div>
       )}
-    </article>
+    </section>
   );
 };
 

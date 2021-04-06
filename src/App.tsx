@@ -24,8 +24,8 @@ export default function App() {
   return (
     <>
       <header>
-        <h1>Legge parkettgulv</h1>
-        <p>Et verktøy for å regne ut hvordan man kan legge parkettgulv.</p>
+        <h1>Legge parkett selv</h1>
+        <p>Å legge parkett er enklere enn du tror.</p>
       </header>
       <main className="App">
         <div className="Inputs">

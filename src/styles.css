@@ -38,12 +38,15 @@ h1,
 h2,
 h3 {
   color: #fff;
+  font-weight: lighter;
 }
 h1 {
   text-align: center;
+  padding: 2px;
+  border-bottom: 1px solid white;
 }
 
-article {
+main > section {
   color: white;
   text-transform: uppercase;
 }
